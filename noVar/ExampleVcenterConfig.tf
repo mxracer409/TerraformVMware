@@ -41,7 +41,7 @@ data "vsphere_network" "network" {
 }
 
 
-/*
+
 ######################################
 ### Build a Unbuntu VM from an ISO ###
 ######################################
@@ -78,8 +78,8 @@ resource "vsphere_virtual_machine" "vm" {
   }
 }
 
-*/
 
+/*
 #################################
 #### clone a VM from Template ###
 #################################
@@ -130,3 +130,4 @@ resource "vsphere_virtual_machine" "Clone1" {
     }
   }
 }
+*/
