@@ -4,9 +4,9 @@
 ##############
 
 provider "vsphere" {
-  user = "administrator@vsphere.local"
-  password       = "WWTwwt1!"
-  vsphere_server = "vc.lab.local"
+  user = "${var.admin_user}"
+  password = "${var.admin_password}"
+  vsphere_server = "${var.vcenter_server}"
 
 # If you have a self-signed cert
   allow_unverified_ssl = true
