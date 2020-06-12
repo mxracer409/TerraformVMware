@@ -32,50 +32,46 @@ provider "vsphere" {
 }
 
 module "datagather_module" {
-    source = "/modules/datagather/datagather.tf"
     #provider = vsphere
+    source = "/modules/datagather/datagather.tf"
+    
 }
 
 module "makevm_module" {
-    source = "/modules/vm/makevm.tf"
     #provider = vsphere
+    source = "/modules/vm/makevm.tf"
+    vsphere_datacenter = "${}"
+    vsphere_datastore = "${}"
+    vsphere_compute_cluster = "${}"
+    vsphere_network = "${}"
+    vsphere_template = "${}"
+    
     
 }
 
 
-
-
-
-
-
-
-########
-variable "vsphere_datacenter_name" {
-    description = "The desired vsphere datacenter name for the VM location"
-    default = "Datacenter"
+/*
+output "vsphere_datacenter" {
+    value = "${vsphere_datacenter.dc.id}"
 }
 
-variable "vsphere_datastore_name" {
-    description = "The desired vsphere datastore location for the VM"
-    default = "vStorage1"
+output "vsphere_datastore" {
+    value = "${vsphere_datacenter.datastore.id}"
 }
 
-variable "vsphere_compute_cluster_name" {
-    description = "The compute cluster the VM will be a part of"
-    default = "Lab"
+output "vsphere_compute_cluster" {
+    value = "${vsphere_datacenter.cluster.id}"
 }
 
-#variable "vsphere_resurce_pool_name" {
-#    description = "The name of resource pool in vcenter to place the VM"
-#    default = "LabPool"
+#output "vsphere_resource_pool" {
+#    value = "${vsphere_datacenter.pool.id}"
 #}
 
-variable "vsphere_network_name" {
-    description = "the VM network to assign the VM nic to - this can be more than 1 network but example is 1"
-    default = "Sim-mgmt"
+output "vsphere_network" {
+    value = "${vsphere_datacenter.network.id}"
 }
 
-variable "vsphere_virtual_machine_template_name" {
-    description = "The name of the VM template to clone"
-    default = "Ubuntu_TF_Template"
+output "vsphere_template" {
+  value = "${vsphere_datacenter.template.id}"
 }
+*/
