@@ -15,7 +15,7 @@ provider "vsphere" {
 ############################################################################
 ####### Defining vcenter data and querying vcenter for object ids   #######
 ############################################################################
-
+/*
 data "vsphere_datacenter" "dc" {
   name = "Datacenter"
 }
@@ -39,13 +39,13 @@ data "vsphere_network" "network" {
   name          = "Sim-Mgmt"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
-
+*/
 
 
 ######################################
 ### Build a Unbuntu VM from an ISO ###
 ######################################
-
+/*
 resource "vsphere_virtual_machine" "vm" {
   name              = "Ubuntu_TF"
   resource_pool_id  = data.vsphere_compute_cluster.cluster.resource_pool_id
@@ -77,7 +77,7 @@ resource "vsphere_virtual_machine" "vm" {
     path = "Ubuntu/ubuntu-16.04.iso"
   }
 }
-
+*/
 
 /*
 #################################
