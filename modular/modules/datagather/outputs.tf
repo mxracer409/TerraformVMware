@@ -25,9 +25,9 @@ output "vsphere_network" {
     value = "${vsphere_datacenter.network.id}"
 }
 
-output "vsphere_template" {
-  value = "${vsphere_datacenter.template.id}"
-}
+#output "vsphere_template" {
+#  value = "${vsphere_datacenter.template.id}"
+#}
 
 
 
