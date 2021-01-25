@@ -34,11 +34,11 @@ data "vsphere_network" "network" {
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
-data "vsphere_virtual_machine" "template" {
-  name = "${var.vsphere_virtual_machine_template_name}"
-  #default value is "Ubuntu_TF_Template" as defined in the vars.tf file
-  datacenter_id = "${data.vsphere_datacenter.dc.id}"
-}
+#data "vsphere_virtual_machine" "template" {
+#  name = "${var.vsphere_virtual_machine_template_name}"
+#  #default value is "Ubuntu_TF_Template" as defined in the vars.tf file
+#  datacenter_id = "${data.vsphere_datacenter.dc.id}"
+#}
 
 
 
