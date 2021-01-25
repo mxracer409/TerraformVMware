@@ -24,9 +24,9 @@ variable "vsphere_network_name" {
     default = "Sim-mgmt"
 }
 
-variable "vsphere_virtual_machine_template_name" {
-    description = "The name of the VM template to clone"
-    default = "Ubuntu_TF_Template"
-}
+#variable "vsphere_virtual_machine_template_name" {
+#    description = "The name of the VM template to clone"
+#    default = "Ubuntu_TF_Template"
+#}
 
 
