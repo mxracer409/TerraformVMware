@@ -1,4 +1,14 @@
+variable "admin_user" {
+    default = "administrator@vsphere.local"
+}
 
+variable "admin_password" {
+    default = "WWTwwt1!"
+}
+
+variable "vsphere_server" {
+    default = "vc.lab.local"
+}
 
 
 /*
