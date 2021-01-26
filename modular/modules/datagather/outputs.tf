@@ -10,23 +10,23 @@ output "vsphere_datacenter" {
 }
 
 output "vsphere_datastore" {
-    value = "${data.vsphere_datacenter.datastore}"
+    value = "${data.vsphere_datastore.datastore}"
 }
 
 output "vsphere_compute_cluster" {
-    value = "${data.vsphere_datacenter.cluster}"
+    value = "${data.vsphere_vsphere_compute_cluster.cluster}"
 }
 
 #output "vsphere_resource_pool" {
-#    value = "${data.vsphere_datacenter.pool}"
+#    value = "${data.vsphere_resource_pool.pool}"
 #}
 
 output "vsphere_network" {
-    value = "${data.vsphere_datacenter.network}"
+    value = "${data.vsphere_vsphere_network.network}"
 }
 
 #output "vsphere_template" {
-#  value = "${data.vsphere_datacenter.template}"
+#  value = "${data.vsphere_vsphere_template.template}"
 #}
 
 
