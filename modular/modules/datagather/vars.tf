@@ -21,7 +21,7 @@ variable "vsphere_compute_cluster_name" {
 
 variable "vsphere_network_name" {
     description = "the VM network to assign the VM nic to - this can be more than 1 network but example is 1"
-    default = "Sim-mgmt"
+    default = "Sim-Mgmt"
 }
 
 #variable "vsphere_virtual_machine_template_name" {
