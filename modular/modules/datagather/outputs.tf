@@ -14,7 +14,7 @@ output "vsphere_datastore" {
 }
 
 output "vsphere_compute_cluster" {
-    value = "${data.vsphere_vsphere_compute_cluster.cluster}"
+    value = "${data.vsphere_compute_cluster.cluster}"
 }
 
 #output "vsphere_resource_pool" {
@@ -22,7 +22,7 @@ output "vsphere_compute_cluster" {
 #}
 
 output "vsphere_network" {
-    value = "${data.vsphere_vsphere_network.network}"
+    value = "${data.vsphere_network.network}"
 }
 
 #output "vsphere_template" {
