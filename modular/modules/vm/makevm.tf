@@ -4,9 +4,9 @@
 
 resource "vsphere_virtual_machine" "vm" {
   name              = "Ubuntu_TF"
-  resource_pool_id  = "${var.vsphere_compute_cluster.cluster.resource_pool_id}"
+  resource_pool_id  = var.vsphere_compute_cluster.resource_pool_id
   #resource_pool_id = data.vsphere_resource_pool.pool.id
-  datastore_id      = "${var.vsphere_datastore.datastore.id}"
+  datastore_id      = var.vsphere_datastore.id
 
   num_cpus = 1
   memory   = 1024
@@ -16,7 +16,7 @@ resource "vsphere_virtual_machine" "vm" {
   scsi_type = "lsilogic-sas"
 
   network_interface {
-    network_id = "${var.vsphere_network.network.id}"
+    network_id = var.vsphere_network.id
   }
 
   disk {
@@ -28,7 +28,7 @@ resource "vsphere_virtual_machine" "vm" {
   }
 
   cdrom {
-    datastore_id = "${var.vsphere_datastore.datastore.id}" #the data store the ISO is located
+    datastore_id = var.vsphere_datastore.id #the data store the ISO is located
     #path = "vStorage1/Ubuntu/ubuntu-16.04.iso"
     path = "Ubuntu/ubuntu-16.04.iso"
   }
