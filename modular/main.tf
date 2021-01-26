@@ -23,9 +23,9 @@
 #}
 
 provider "vsphere" {
-  user = "${var.admin_user}"
-  password = "${var.admin_password}"
-  vsphere_server = "${var.vsphere_server}"
+  user = var.admin_user
+  password = var.admin_password
+  vsphere_server = var.vsphere_server
 
 # If you have a self-signed cert
   allow_unverified_ssl = true
@@ -40,10 +40,10 @@ module "datagather_module" {
 module "makevm_module" {
     #provider = vsphere
     source = "./modules/vm"
-    vsphere_datacenter = "${module.datagather_module.vsphere_datacenter.id}"
-    vsphere_datastore = "${module.datagather_module.vsphere_datastore.id}"
-    vsphere_compute_cluster = "${module.datagather_module.vsphere_compute_cluster.id}"
-    vsphere_network = "${module.datagather_module.vsphere_network.id}"
+    vsphere_datacenter = "${module.datagather_module.vsphere_datacenter}"
+    vsphere_datastore = "${module.datagather_module.vsphere_datastore}"
+    vsphere_compute_cluster = "${module.datagather_module.vsphere_compute_cluster}"
+    vsphere_network = "${module.datagather_module.vsphere_network}"
     #vsphere_template = "${}"
     
     
