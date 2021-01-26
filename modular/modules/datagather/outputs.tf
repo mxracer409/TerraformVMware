@@ -6,27 +6,27 @@
 
 
 output "vsphere_datacenter" {
-    value = "${vsphere_datacenter.dc.id}"
+    value = "${data.vsphere_datacenter.dc}"
 }
 
 output "vsphere_datastore" {
-    value = "${vsphere_datacenter.datastore.id}"
+    value = "${data.vsphere_datacenter.datastore}"
 }
 
 output "vsphere_compute_cluster" {
-    value = "${vsphere_datacenter.cluster.id}"
+    value = "${data.vsphere_datacenter.cluster}"
 }
 
 #output "vsphere_resource_pool" {
-#    value = "${vsphere_datacenter.pool.id}"
+#    value = "${data.vsphere_datacenter.pool}"
 #}
 
 output "vsphere_network" {
-    value = "${vsphere_datacenter.network.id}"
+    value = "${data.vsphere_datacenter.network}"
 }
 
 #output "vsphere_template" {
-#  value = "${vsphere_datacenter.template.id}"
+#  value = "${data.vsphere_datacenter.template}"
 #}
 
 
